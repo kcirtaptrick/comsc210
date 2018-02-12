@@ -92,20 +92,22 @@ void NumberList<T>::display() const {
         std::cout << p->value << ", ";
         p=p->next;
     }
-    std::cout << p->value << std::endl; }
+    std::cout << p->value << std::endl; 
+}
 
 template<class T>
 std::string NumberList<T>::toString() const {
     std::string output;
     Node<T> *p = head;
 
-    while(p->next) {
+    while(p) {
         output += std::to_string(p->value);
         output += ", ";
         p=p->next;
     }
-    output += std::to_string(p->value);
-    return output; }
+    // output += std::to_string(p->value);
+    return output; 
+}
 
 
 int main() {
